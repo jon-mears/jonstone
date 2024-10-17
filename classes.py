@@ -49,13 +49,13 @@ class Deck:
             elif random_number <= 50:
                 self.cards.append(PeaceableElephant())
             
-            # 49% chance that a Rosean Card is added to the Deck
-            elif random_number <= 99:
+            # 50% chance that a Rosean Card is added to the Deck
+            else:
                 self.cards.append(Rosean())
             
-            # 1% chance that a LordShiva Card is added to the Deck
-            else:
-                self.cards.append(LordShiva())
+            # # 1% chance that a LordShiva Card is added to the Deck
+            # else:
+            #     self.cards.append(LordShiva())
 
     def pull_card(self):
         '''Simulates pulling a Card from the Deck, removing and returning a Card from the list of Cards'''
@@ -131,20 +131,20 @@ class BabyBird(Card):
         # Calls the parent's update_text method
         super().update_text()
 
-class LordShiva(Card):
-    '''A LordShiva class, a child of the Card abstract class'''
+# class LordShiva(Card):
+#     '''A LordShiva class, a child of the Card abstract class'''
 
-    def __init__(self):
-        '''Constructor for the LordShiva class'''
+#     def __init__(self):
+#         '''Constructor for the LordShiva class'''
 
-        # Calls the constructor of the Card class with parameters specifically appropriate to a LordShiva Card
-        super().__init__("lordshiva.png", "Lord Shiva", 9999, 9999, 10)
+#         # Calls the constructor of the Card class with parameters specifically appropriate to a LordShiva Card
+#         super().__init__("lordshiva.png", "Lord Shiva", 9999, 9999, 10)
 
-    def update_text(self):
-        '''Updates the text of the Card according to changes in its instance variables'''
+#     def update_text(self):
+#         '''Updates the text of the Card according to changes in its instance variables'''
 
-        # Calls the parent's update_text method
-        super().update_text()
+#         # Calls the parent's update_text method
+#         super().update_text()
 
 class PeaceableElephant(Card):
     '''A PeaceableElephant class, a child of the Card abstract class'''
